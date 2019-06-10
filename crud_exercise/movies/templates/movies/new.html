@@ -1,0 +1,37 @@
+{% extends 'movies/base.html' %}
+{% block content %}
+<br>
+<h1>new 영화 입력 페이지입니다.</h1><br>
+<form action="{% url 'movies:create' %}" method="POST">
+    {% csrf_token %}
+<label for="title">TITLE</label>
+<input type="text" name="title" id="title"><br>
+<label for="title_en">TITLE_EN</label>
+<input type="text" name="title_en" id="title_en"><br>
+<label for="audience">AUDIENCE</label>
+<input type="text" name="audience" id="audience"><br>
+
+
+<label for="genre">GENRE</label>
+<input type="text" name="genre" id="genre"><br>
+<label for="watch_grade">WATCH_GRADE</label>
+<input type="text" name="watch_grade" id="watch_grade"><br>
+<label for="score">SCORE</label>
+<input type="text" name="score" id="score"><br>
+<label for="open_date">OPEN_DATE</label>
+<input type="date" name="open_date" id="open_date"><br>
+<label for="open_date"></label>
+
+<label for="poster_url">POSTER_URL</label>
+<input type="text" name="poster_url" id="poster_url"><br>
+
+<label for="description">DESCRIPTION</label>
+<input type="text" name="description" id="description"><br>
+
+
+<input type="submit" value="제출">
+</form>
+
+<hr>
+
+{% endblock %}
